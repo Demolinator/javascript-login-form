@@ -1,0 +1,89 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    min-height: 80vh;
+    background-color: rgb(21, 15, 43);
+}
+
+body, .form-signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.division{
+    padding: 2% 4% 2% 4%;
+    background-color: rgb(41, 26, 98);
+    border-radius: 3%;
+}
+
+.division::before{
+    content:'';
+    position: absolute;
+    background: linear-gradient(45deg,
+    blue, orange, green);
+    background-size: 200% 200%;
+    top: 120px;
+    left: 430px;
+    bottom: 240px;
+    right: 430px;
+    z-index: -1;
+    filter: blur(30px);
+    animation: glowing 5s ease infinite ;
+}
+
+@keyframes glowing{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(130, 182, 255);
+}
+
+.btn-division{
+    display: flex;
+    justify-content: center;
+}
+
+.form-control{
+    height: 4vh;
+    width: 50vh;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-control:focus{
+    border-color: aqua;
+    background-color: rgb(30,18,76);
+    color: aliceblue;
+    transition: 0.5s;
+}
+
+.btn{
+    height: 5vh;
+    width: 10vh;
+    font-size: medium;
+    background-color: rgb(177 118 255);
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.btn:hover{
+    background-color: rgb(88,23,114);
+    transition: 0.5s;
+}
